@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function App() {
-	const [newItem, setNewItem] = useState("");
+	const [newItem, setNewItem] = useState('');
 	const [todos, setTodos] = useState([]);
 
 	function handleSubmit(e) {
@@ -11,7 +11,7 @@ function App() {
 			return [...currentTodos, { id: crypto.randomUUID(), title: newItem, completed: false }];
 		});
 
-		setNewItem("");
+		setNewItem('');
 	}
 
 	function toggleTodo(id, completed) {
@@ -43,7 +43,7 @@ function App() {
 			</form>
 			<h2 className="app__header">To Do List</h2>
 			<ul className="app__list">
-				{todos.length === 0 && "Your Items Will Be Displayed Here"}
+				{todos.length === 0 && 'Your To Do Items Will Be Displayed Here'}
 				{todos.map((todo) => {
 					return (
 						<li className="app__list__item" key={todo.id}>
